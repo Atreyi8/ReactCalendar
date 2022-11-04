@@ -1,0 +1,99 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.calendarContainer {
+  display: flex;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.monthClass {
+  flex-grow: 3;
+}
+.calendarHeaderitems {
+  flex-grow: 1;
+}
+.headerItemMargin {
+  padding: 10px;
+  border-right: 1px solid gray;
+  width: 0px;
+}
+
+/* CSS actually used from here -- grid css*/
+
+.boxContainer {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.days {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-top: 1px solid black;
+
+  justify-content: center;
+  align-items: center;
+}
+.montGrid {
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+.gridItem {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 10px;
+  min-height: 30px;
+}
+
+.dateClass {
+  padding-left: 50px;
+  font-size: 12px;
+}
+
+.gridItemHover:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.headerGridContainer {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.monthHeaderColumn {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  font-size: 20px;
+  font-weight: bold;
+  justify-self: start;
+  padding: 10px;
+}
+
+.selectedDateHeaderColumn {
+  font-size: 12px;
+  align-self: stretch;
+  font-weight: bold;
+  grid-column-start: 5;
+  grid-column-end: 8;
+  padding: 10px;
+}
+
+.todaysDateDiv {
+  color: brown;
+  font-weight: bold;
+}
+
+.selectedDateChange {
+  background-color: rgb(35, 151, 240);
+  color: whitesmoke;
+}
